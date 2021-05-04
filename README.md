@@ -1,6 +1,10 @@
-# How to Play
+# Snarl
 
-## Usage
+Snarl is a text based dungeon crawler developed for CS4500: Software Dev @ Northeastern.
+
+## Local Player Guide
+
+### Usage
 
 Run `./localSnarl`. The following arguments are optional:
 * `--levels FILENAME` where FILENAME is the name of a file containing JSON level specifications (see description below). The default file is snarl.levels.
@@ -11,25 +15,25 @@ Run `./localSnarl`. The following arguments are optional:
 
 * `--observe` by default, only the players’ view should be presented. If this option is given, an observer view (the full level) should be presented in addition to or instead of the player view. Note: if you would like, you **can** choose to observe a game with multiple players.
 
-## Play Guide
+### Play Guide
 
 Note:
 The game **does not** create an extra screen for the GUI. Everything is displayed in the terminal.
 
 The game uses an (x,y) coordinate system when providing coordinates to the player.
 
-### Setup
+#### Setup
 After running `./localSnarl` the game will prompt each player and observer for their name.
 Type in a name, and press enter.
 
 Next, the program will ask each player whether they want to start the game. Type y and press enter.
 
-### Gameplay
+#### Gameplay
 
 During gameplay, the game will render the player's/observer's views sequentially.
 The view consists of a map of the level, and a table of state information.
 
-#### Player Actions
+##### Player Actions
 When it is a player's turn, they will get a list of moves they can make. The player must type the number of the move they want to make, and press enter. The numbers for each move are listed in the table.
 
 Alternatively, the player can provide a 1-2 character string containing the letters w,a,s, or d and then press enter.
@@ -43,9 +47,9 @@ To move to the topleft location, a human would type 'we' then enter. To move to 
 
 To end the game prematurely type ctrl-D when prompted for a move to close STDIN and exit the game.
 
-#### Observer Actions
+##### Observer Actions
 After each turn, the observer will get a view of the game. They must press enter in order to proceed.
 
-### Ending
+#### Ending
 
 When the game is over, a game over screen is shown. It indicates whether the players won/lost, and each player's rank. Players are ranked based on the number of exits traveled to, and ties are broken by the number of keys found.
