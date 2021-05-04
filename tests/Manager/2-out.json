@@ -1,0 +1,51 @@
+[
+    {
+        "type": "state",
+        "level": {
+            "type": "level",
+            "rooms": [
+                {
+                    "type": "room",
+                    "origin": [0, 0],
+                    "bounds": {"rows": 3, "columns": 4},
+                    "layout": [[0, 1, 1, 1],
+                               [2, 1, 1, 1],
+                               [0, 1, 1, 1]]
+                }
+                ],
+            "hallways": [],
+            "objects": [{"type": "exit", "position": [2, 1]}]
+        },
+        "adversaries": [{"type": "zombie", "name": "0", "position": [0, 2]}],
+        "exit-locked": false,
+        "players": []
+    },
+    [
+        ["nikhil",
+            {
+                "type": "player-update",
+                "layout":
+                [[0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0],
+                [0, 0, 1, 1, 1],
+                [0, 2, 1, 1, 1],
+                [0, 0, 1, 1, 1]],
+                "position": [0, 1],
+                "objects": [{"type": "key", "position": [0, 3]}, {"type": "exit", "position": [2, 1]}],
+                "actors": [{"type": "zombie", "position": [0, 2], "name": "0"}]}
+        ],
+        ["nikhil", {"type": "move", "to": [0, 3]}, "Key"],
+        ["nikhil", {"type": "player-update",
+            "layout":
+                      [[0, 0, 0, 0, 0],
+                      [0, 0, 0, 0, 0],
+                      [1, 1, 1, 0, 0],
+                      [1, 1, 1, 0, 0],
+                      [1, 1, 1, 0, 0]],
+            "position": [0, 3],
+            "objects": [{"type": "exit", "position": [2, 1]}],
+            "actors": [{"type": "zombie", "position": [0, 2], "name": "0"}]}
+        ],
+        ["nikhil", {"type": "move", "to": [0, 2]}, "Eject"]
+    ]
+]

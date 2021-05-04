@@ -1,0 +1,23 @@
+#!/usr/bin/python3
+
+# Global imports
+import os
+import sys
+import argparse
+
+# Resolve custom imports
+sys.path.append(".")
+# os.system("pip3 install rich --user")
+from src.Game.controllers.snarl_launcher import SnarlLauncher
+
+# Get console arguments
+parser = argparse.ArgumentParser()
+parser.add_argument('--levels', default='snarl.levels')
+parser.add_argument('--players', type=int, default=1)
+parser.add_argument('--start', type=int, default=1)
+parser.add_argument('--observe', action='store_true')
+args = parser.parse_args()
+
+# Launch Snarl
+launcher = SnarlLauncher(os.path.abspath(args.levels), args.players, args.start, args.observe)
+launcher.launch()

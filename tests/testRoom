@@ -1,0 +1,4 @@
+#!/usr/bin/python3
+
+from tests.Room.test_room import run_test
+run_test()

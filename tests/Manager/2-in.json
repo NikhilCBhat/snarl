@@ -1,0 +1,27 @@
+[
+    ["nikhil"],
+    {
+        "rooms": [
+            {
+                 "type": "room",
+                 "origin": [0, 0],
+                 "bounds": {"rows": 3, "columns": 4},
+                 "layout": [
+                     [0, 1, 1, 1],
+                     [2, 1, 1, 1],
+                     [0, 1, 1, 1]
+                    ]
+            }
+        ],
+        "objects": [{"type": "key", "position": [0, 3]},
+        {"type": "exit", "position": [2, 1]}],
+        "hallways": []
+    },
+    2,
+    [ [0,1], [0,2] ],
+    [ [{ "type": "move", "to": [0, 3] }
+    , { "type": "move", "to": [0, 2] }
+    , { "type": "move", "to": [0, 3] }
+    , { "type": "move", "to": null }
+    ]]
+]

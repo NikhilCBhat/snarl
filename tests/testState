@@ -1,0 +1,4 @@
+#!/usr/bin/python3
+
+from tests.State.test_state import run_test
+run_test()

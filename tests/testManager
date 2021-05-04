@@ -1,0 +1,4 @@
+#!/usr/bin/python3
+
+from tests.Manager.test_manager import ManagerTester
+ManagerTester().run_test()

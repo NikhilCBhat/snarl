@@ -1,0 +1,29 @@
+#!/usr/bin/python3
+
+# Global imports
+import os
+import sys
+import argparse
+
+# Resolve custom imports
+sys.path.append(".")
+os.system("pip3 install rich --user")
+from src.Remote.snarl_client import SnarlPlayerClient
+from src.Remote.snarl_client import SnarlAdversaryClient
+from src.Game.constants import ZOMBIE_ACTOR_TYPE, GHOST_ACTOR_TYPE, PLAYER_ACTOR_TYPE
+
+# Get console arguments
+parser = argparse.ArgumentParser()
+parser.add_argument('--address', default='127.0.0.1')
+parser.add_argument('--port', type=int, default=45678)
+parser.add_argument('--type', default=PLAYER_ACTOR_TYPE, choices=[ZOMBIE_ACTOR_TYPE, GHOST_ACTOR_TYPE, PLAYER_ACTOR_TYPE])
+parser.add_argument('--level', type=int, default=0)
+args = parser.parse_args()
+
+# Create and Launch Client
+if args.type == PLAYER_ACTOR_TYPE:
+    client = SnarlPlayerClient(args.address, args.port)
+else:
+    client = SnarlAdversaryClient(args.address, args.port, args.type, args.level)
+
+client.launch()
