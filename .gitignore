@@ -1,0 +1,6 @@
+__pycache__/
+.idea/
+*.code-workspace
+.vscode/
+.hypothesis/
+.pytest*
